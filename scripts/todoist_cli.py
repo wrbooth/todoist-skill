@@ -51,7 +51,7 @@ def handle_errors(fn):
 def tasks_list(args):
     api = get_api()
     if args.filter:
-        iterator = api.filter_tasks(filter=args.filter)
+        iterator = api.filter_tasks(query=args.filter)
     else:
         kwargs = {}
         if args.project_id:
